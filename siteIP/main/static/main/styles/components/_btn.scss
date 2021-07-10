@@ -1,0 +1,21 @@
+@use '../base'as b;
+@use 'sass:map';
+@use 'sass:color';
+
+.button{
+    @include b.sizeButton(150px, 60px);
+    border: none;
+    color: map.get(b.$bg-color, main);
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    &:hover{
+        background: darken(map.get(b.$bg-color, btn), 50%);
+        color: #fff;
+    }
+}

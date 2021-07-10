@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/styles/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <nav class="header-nav container">
+            <ul class="header-list">
+                <li class="header-list__item"><a href="#" class="header-list__link">Главная</a></li>
+                <li class="header-list__item"><a href="#" class="header-list__link">О магазине</a></li>
+                <li class="header-list__item"><a href="#" class="header-list__link">Наши товары</a></li>
+                <li class="header-list__item"><a href="#" class="header-list__link">Партнёры</a></li>
+                <li class="header-list__item"><a href="#" class="header-list__link">Контакты</a></li>
+                <li class="header-list__item header-list__number"><a href="#" class="header-list__numberlink">+7 919 712 42 98</a></li>
+            </ul>
+        </nav>
+        <div class="header-body container">
+            <div class="header-body__left">
+                <h1 class="header-body__titel">Большой Шлёпа</h1>
+                <p class="header-body__subtitel">Большой Шлёпа - это большой кот, он очень милый и крутой.</p>
+                <a href="{% url 'Products' %}"> <button href="{% url 'Products' %}" class="button">НАЗАД</button></a>
+            </div>
+            <div class="header-body__right">
+                <img src="{% static 'main/images/headerImg.jpg' %}" alt="" class="header-body__ing">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2 class="about-titel"><span>О</span> Шлёпе</h2>
+                <div class="about-wrapper">
+                    <div class="about-wrapper__text">
+                        <h3 class="about-wrapper__titel">Самый лучший кот мира</h3>
+                        <p class="about-wrapper__subtitel">Большой Шлёпа — один из главных героев мемов 2020, а затем 2021 года. Так в рунете прозвали каракала (степную рысь) по кличке Гоша, который живёт в российской семье. На Западе он тоже популярен, только под именем Big Floppa. В России же его называют не иначе как Шлёпа, большой русский кот.</p>
+                    </div>
+                    <div class="about-wrapper__numbers">
+                        <div class="about-wrapper__titel">Немного о цифрах</div>
+                        <div class="about-wrapper__block">
+                            <img src="{% static 'main/images/aboutNum1.svg' %}" alt="" class="about-wrapper__block-img">
+                            <p class="about-wrapper__block-text"><span>100 см</span> в высоту</p>
+                        </div>
+                        <div class="about-wrapper__block">
+                            <img src="{% static 'main/images/aboutNum2.svg' %}" alt="" class="about-wrapper__block-img">
+                            <p class="about-wrapper__block-text"><span>3</span> год жизни</p>
+                        </div>
+                    </div>
+                    <div class="about-wrapper__img">
+                        <img src="{% static 'main/images/aboutImg.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-text">
+                <p class="footer-text__left">(с) Все права защищены. Большой Шлёпа. 2021</p>
+                <p class="footer-text__right">Сиротов Дмитрий 201-322</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

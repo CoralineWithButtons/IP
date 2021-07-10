@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Services</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'main/css/reset.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'main/css/layout.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'main/js/jquery-1.6.js' %}" ></script>
+<script type="text/javascript" src="{% static 'main/js/cufon-yui.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/js/cufon-replace.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/js/Swis721_Cn_BT_400.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/js/Swis721_Cn_BT_700.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/js/tabs.js' %}"></script>
+
+</head>
+
+<body id="page3">
+	<div class="body1">
+	<div class="body2">
+	<div class="body5">
+		<div class="main">
+<!-- header -->
+			<header>
+				<div class="wrapper">
+				<h1><a href="#" id="logo">Progress Business Company</a></h1>
+				<nav>
+					<ul id="menu">
+						<li id="nav1" class="active"><a href="{% url 'index' %}">Home<span>Welcome!</span></a></li>
+						<li id="nav2"><a href="{% url 'News' %}">News<span>Fresh</span></a></li>
+						<li id="nav3"><a href="{% url 'new_home' %}">Our <span>employees</span></a></li>
+						<li id="nav4"><a href="{% url 'Products' %}">Products<span>The best</span></a></li>
+						<li id="nav5"><a href="{% url 'Contacts' %}">Contacts<span>Our Address</span></a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+<!-- header end-->
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="body3">
+		<div class="main">
+<!-- content -->
+{% block content %}
+    <div class="features">
+        <h1>Наши сотрудники</h1>
+        {% if new %}
+        {% for el in new %}
+            <div class="alert alert-warning">
+                <h2>{{ el.title }}</h2>
+                <h3>{{ el.role }}</h3>
+				<p>{{ el.skills }}</p>
+				<p>{{ el.full_text }}</p>
+				<p>{{ el.date }}</p>
+				<a href="{% url 'new-detail' el.id %}" class="btn btn-warning">Read more</a>
+            </div>
+        {% endfor %}
+        {% else %}
+            <p>У Вас нет сотрудников</p>
+        {% endif %}
+    </div>
+{% endblock %}
+			<a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить запись</button></li></a>
+			
+		</div>
+	</div>
+	<div class="body4">
+		<div class="main">
+			<article id="content2">
+				<div class="wrapper">
+					<section class="col3">
+						<h4>Why Us?</h4>
+						<ul class="list1">
+							<li><a href="#">Lorem ipsum dolor sit</a></li>
+							<li><a href="#">Dmet, consectetur</a></li>
+							<li><a href="#">Adipisicing elit eiusmod </a></li>
+							<li><a href="#">Tempor incididunt ut</a></li>
+						</ul>
+					</section>
+					<section class="col3 pad_left2">
+						<h4>Address</h4>
+						<ul class="address">
+							<li><span>Country:</span>Russia</li>
+							<li><span>City:</span>Moscow</li>
+							<li><span>Phone:</span>8 919 712 42 98</li>
+							<li><span>Email:</span><a href="mailto:"><span class="__cf_email__" data-cfemail="ea9a98858d988f9999aa878b8386c4898587">sirotov.d@mail.ru</span></a></li>
+						</ul>
+					</section>
+					<section class="col3 pad_left2">
+						<h4>Follow Us</h4>
+						<ul id="icons">
+							<li><a href="https://vk.com/sdmfy"><img src="{% static 'main/img/icon1.jpg' %}" alt="">Facebook</a></li>
+							<li><a href="https://vk.com/sdmfy"><img src="{% static 'main/img/icon2.jpg' %}" alt="">Twitter</a></li>
+							<li><a href="https://vk.com/sdmfy"><img src="{% static 'main/img/icon3.jpg' %}" alt="">LinkedIn</a></li>
+							<li><a href="https://vk.com/sdmfy"><img src="{% static 'main/img/icon4.jpg' %}" alt="">Delicious</a></li>
+						</ul>
+					</section>
+					<section class="col2 right">
+						<h4>Newsletter</h4>
+						<form id="newsletter" method="post">
+							<div>
+								<div class="wrapper">
+									<input class="input" type="text" value="Type Your Email Here"  onblur="if(this.value=='') this.value='Type Your Email Here'" onFocus="if(this.value =='Type Your Email Here' ) this.value=''" >
+								</div>
+
+							</div>
+						</form>
+					</section>
+				</div>
+			</article>
+<!-- content end -->
+		</div>
+	</div>
+		<div class="main">
+<!-- footer -->
+			<footer>
+				<a rel="nofollow" href="https://vk.com/sdmfy" target="_blank">Sirotov Dmitrii</a> 201-322<br>
+				<a href="https://vk.com/sdmfy" target="_blank">ABOBA</a> INC
+			</footer>
+<!-- footer end -->
+		</div>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript"> Cufon.now(); </script>
+<script>
+	$(document).ready(function() {
+		tabs.init();
+	})
+</script>
+</body>
+</html>

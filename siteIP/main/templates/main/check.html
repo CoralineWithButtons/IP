@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Проект</title>
+
+	<script src="{% static '/main/js/googletag.js' %}"></script>
+
+
+	<link rel="stylesheet" href="{% static '/main/css/font.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static '/main/css/light.css' %}" id="theme-link">
+	<link rel="stylesheet" href="{% static '/main/css/print.css' %}">
+</head>
+
+<body class="body">
+	<div class="theme-button wrapper" id="theme-button"><pre><a href="{% url 'Products' %}">НАЗАД</a></pre></div>
+	<!-- Google Tag Manager (noscript) -->
+
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTL7RM7" height="0" width="0"
+			style="display:none;visibility:hidden">
+		</iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<!-- button scroll top -->
+	<button class="buttonTop">
+		<img src="{% static 'main/img/arrow-up.svg' %}" alt="Кнопка для возвращения к началу страницы" width="20" class="Вернуться к началу страницы">
+	</button>
+	<!-- end button scroll top -->
+
+	<!-- burger menu -->
+	<div class="menu-burger" ><button class="aaa">
+		<div></div>>
+		<div></div>
+		<div></div></button>
+	</div>
+	<!-- end burger menu -->
+
+	<!-- sidebar menu -->
+	<nav class="nav" role="navigation">
+		<div class="nav__block">
+			<img class="nav__logo" src="{% static 'main/img/logo.png' %}" alt="Логотип">
+
+			<a class="nav__link--skip" href="#main">Пропустить навигацию</a>
+			<a href="#technologies" class="nav__link">Технологии</a>
+			<a href="#conclusions" class="nav__link">Основные выводы</a>
+			<a href="#form" class="nav__link">Предложить свою идею</a>
+		</div>
+	</nav>
+	<!-- end sidebar menu -->
+
+	<header class="header" role="banner">
+		<div class="container header__inner">
+
+			<h1 class="header__title">
+				Инновационные решения<br>
+				в сфере веб-разработки
+			</h1>
+
+			<h2 class="header__subtitle">
+				Сиротов Дмитрий Павлович подготовил обзор российских<br>
+				и международных продуктов для развития отрасли
+			</h2>
+
+			<div class="header__links flex align-items-center justify-space-between">
+				<div class="header__buttons">
+					<a href="#form" class="button button--white-border header__button">Поддержать автора</a>
+
+					<a href="#form" class="button button--white-border header__button">Предложить своё решение</a>
+					<a href="{% url 'Products' %}" class="button button--white-border header__button">НАЗАД</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main" role="main" id="#solution">
+		<section class="section section--white">
+			<div class="section__inner container">
+				<p class="section__paragraph">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+
+				<p class="section__paragraph">
+					Анализ международного опыта показывает, что для решения данной проблемы
+					<span class="fw500"> лучший веб-разработчики выбирают комплексный подход с опорой на инновационные
+						технологии</span>,
+					в котором выделяются четыре основные задачи:
+				</p>
+
+				<ol class="num-list">
+					<li class="num-list__item">
+						<span class="fw500">Lorem ipsum dolor sit amet</span>,
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.
+					</li>
+
+					<li class="num-list__item">
+						<span class="fw500">Lorem ipsum dolor sit amet</span>,
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.
+					</li>
+					<li class="num-list__item">
+						<span class="fw500">Lorem ipsum dolor sit amet</span>,
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.
+					</li>
+					<li class="num-list__item">
+						<span class="fw500">Lorem ipsum dolor sit amet</span>,
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.
+					</li>
+				</ol>
+			</div>
+		</section>
+
+
+		<!-- hashtag section -->
+		<section class="section section--pink" id="technologies">
+			<div class="container">
+				<h2 class="section__title">Технологии</h2>
+				<p class="section__paragraph">Группы технологий, которые оказывают на сферу большой эффект</p>
+
+				<div class="container">
+					<div class="hashtag color-purple">
+						<a class="hashtag__element hashtag__element-1" href="#">#веб</a>
+
+						<a class="hashtag__element hashtag__element-2" href="#">#инклюзивное_оборудование</a>
+
+						<a class="hashtag__element hashtag__element-3" href="#">#дополненная_реальность</a>
+
+						<a class="hashtag__element hashtag__element-4" href="#">#платформы</a>
+
+						<a class="hashtag__element hashtag__element-5" href="#">#большие_данные</a>
+
+						<a class="hashtag__element hashtag__element-6" href="#">#искуственный_интеллект</a>
+
+						<a class="hashtag__element hashtag__element-7" href="#">#роботы</a>
+
+						<a class="hashtag__element hashtag__element-8" href="#">#интернет_вещей</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end hashtag section -->
+
+		<section class="section section--white" id="conclusions">
+			<div class="container">
+				<h2 class="section__title">Основные выводы</h2>
+
+				<p class="section__paragraph">
+					Сиротов Дмитрий Павлович подготовил
+					<a href="#" class="conclusions__download-link">обзор</a>
+					веб решений, которые перевернут весь мир с ног на голову:
+				</p>
+
+				<ol class="num-list">
+					<li class="num-list__item">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.;
+					</li>
+
+					<li class="num-list__item">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</li>
+				</ol>
+
+				<p class="section__paragraph"><span class="fw500">Ключевые выводы для технологических решений:</span>
+				</p>
+
+				<ol class="num-list">
+					<li class="num-list__item">
+						Lorem ipsum dolor sit amet
+						<span class="fw500">consectetur adipiscing elit, sed do eiusmod tempor incididunt</span>
+						ut labore и <span class="fw500">et dolore magna aliqua</span>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+						fugiat nulla pariatur.
+					</li>
+
+					<li class="num-list__item">
+						Lorem ipsum dolor sit amet
+						<span class="fw500">consectetur adipiscing elit, sed do eiusmod tempor incididunt</span>
+						ut labore и <span class="fw500">et dolore magna aliqua</span>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+						fugiat nulla pariatur.
+					</li>
+					<li class="num-list__item">
+						Lorem ipsum dolor sit amet
+						<span class="fw500">consectetur adipiscing elit, sed do eiusmod tempor incididunt</span>
+						ut labore и <span class="fw500">et dolore magna aliqua</span>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+						fugiat nulla pariatur.
+					</li>
+				</ol>
+
+				<!-- modal buttons -->
+				<div class="flex justify-center modal__button-wrapper">
+					<button href="#" class="button button--pink section--white__button modal-button" id="modal-1-btn">
+						<span class="button-border__text">Рынок Сай-фай херни</span>
+					</button>
+
+					<button href="#" class="button button--pink section--white__button modal-button" id="modal-2-btn">
+						<span class="button-border__text">Рынок ещё большей сай-фай херни</span>
+					</button>
+				</div>
+				<!-- end modal buttons -->
+
+				<!-- modals -->
+				<div class="modal-wrapper" id="modal-1">
+					<div class="modal-wrapper__bg">
+						<div class="modal__close">
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="modal">
+							<img class="modal__bg" src="{% static 'main/img/modal.webp' %}" alt="Модальное окно">
+
+							<div class="modal__block-info">
+								<h2 class="modal__title">Сай-фай херня</h2>
+								<p class="section__paragraph">Тут сай-фай херня</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-wrapper" id="modal-2">
+					<div class="modal-wrapper__bg">
+						<div class="modal__close">
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="modal">
+							<img class="modal__bg" src="{% static 'main/img/modal.webp' %}" alt="Модальное окно">
+
+							<div class="modal__block-info">
+								<h2 class="modal__title">Ещё большая сай-фай херня</h2>
+								<p class="section__paragraph">А тут ещё большая сай-фай херня</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end modals -->
+			</div>
+		</section>
+
+		<form class="form container" id="form">
+			<h2 class="form__title">Пришлите нам свою инновационную идею!</h2>
+
+			<label class="label">
+				<span class="label__title">ФИО</span>
+				<input type="text" class="label__input">
+			</label>
+
+			<label class="label">
+				<span class="label__title">Телефон</span>
+				<input type="text" class="label__input" type="tel">
+			</label>
+
+			<label class="label">
+				<span class="label__title">Почта</span>
+				<input type="text" class="label__input" type="email">
+			</label>
+
+			<button type="submit" class="form__submit">Отправить</button>
+		</form>
+	</main>
+
+	<script src="{% static '/main/js/theme.js' %}"></script>
+	<script type="text/javascript" src="{% static '/main/js/theme.js' %}"></script>
+</body>
+<footer>
+	<p>Сиротов Дмитрий Павлович 201-322</p>
+</footer>
+
+</html>

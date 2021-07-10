@@ -1,0 +1,11 @@
+@mixin flex($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin sizeButton($w, $h) {
+    background: #D1A954;
+    width: $w;
+    height: $h;
+}

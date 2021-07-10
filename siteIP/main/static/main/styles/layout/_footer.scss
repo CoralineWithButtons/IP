@@ -1,0 +1,14 @@
+@use '../base/' as b;
+
+%color-text{
+    color: #989898;
+}
+
+.footer{
+    @extend %color-text;
+    border-top: 1px solid #565656;
+    &-text{
+        @include b.flex(space-between, none);
+        padding: 30px 0;
+    }
+}

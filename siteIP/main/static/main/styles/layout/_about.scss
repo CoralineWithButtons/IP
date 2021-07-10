@@ -1,0 +1,29 @@
+@use '../base' as b;
+
+.about{
+    padding: 150px 0;
+    &-titel{
+        margin-bottom: 100px;
+    }
+    &-wrapper{
+        @include b.flex(space-between, none);
+        &__text{
+            max-width: 445px;
+        }
+        &__subtitel{
+            font-size: 17px;
+        }
+        &__titel{
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 29px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        
+        &__number{
+            width: 255px;
+        }
+    }
+}
