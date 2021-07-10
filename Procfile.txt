@@ -1,0 +1,1 @@
+web: gunicorn quiet-brushlands-82060.wsgi --log-file -
