@@ -1,0 +1,54 @@
+{% extends 'accs/main.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid text-center my-4">
+    <div class="container">
+      <h1 class="display-4">Компания "Шлёпа и ручки"</h1>
+      <p class="lead">Компания занимается продажей ручек, карандашей и прочих канцтоваров.</p>
+        <img src="https://sun9-35.userapi.com/impg/Vxq3W1MsnjznENM_LYw3IqqmjfGOZXhuww2weg/j1OeFh8p3qc.jpg?size=604x355&quality=96&sign=db97d7f8c708b2fa5315ce783ac8f511&type=album">
+    </div>
+</div>
+
+<div class="row m-4">
+    <div class="col-sm-4 px-3 pb-3 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Проекты</h3>
+          <p class="card-text">{{p_count}}</p>
+          <a href="/projects/" class="btn btn-primary">Открыть</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 px-3 pb-3 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Мероприятия</h3>
+          <p class="card-text">{{e_count}}</p>
+          <a href="/events/" class="btn btn-primary">Открыть</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 px-3 pb-3 text-center">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Наши работники</h3>
+            <p class="card-text">{{s_count}}</p>
+            <a href="/students/" class="btn btn-primary">Открыть</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Хочешь к нам в команду?</h1>
+    <p class="lead">Логинься на сайте и подавай заявку!</p>
+    <hr class="my-4">
+    <p>Мы тебя ждём</p>
+      <img src="https://sun1-19.userapi.com/s/v1/ig2/H7lvR9B7A2CseaH82a_ZQCtWT5TOMUyamo8FPiydsmUXC6OF9RynHO8U03WFOBUqkTMHADmgk8Uwo0kh-giPxYDf.jpg?size=200x200&quality=96&crop=222,219,904,904&ava=1">
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="register/" role="button">Регистрация</a>
+      <a class="btn btn-primary btn-lg" href="accounts/login/" role="button">Авторизация</a>
+    </p>
+  </div>
+{% endblock %}
